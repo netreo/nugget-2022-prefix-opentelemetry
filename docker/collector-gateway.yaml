@@ -1,0 +1,50 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+      grpc:
+        endpoint: 0.0.0.0:4317
+
+processors:
+  batch:
+    timeout: 1s
+
+exporters:
+  logging:
+    loglevel: info
+  # host.docker.interal = localhost outside of docker
+  
+  # http exporter to prefix
+  # otlphttp/prefix:
+  #   endpoint: https://host.docker.internal:7295
+  #   tls:
+  #     insecure_skip_verify: true
+  
+  # grpc exporter to prefix
+  otlp/prefix:
+    endpoint: host.docker.internal:7134
+    tls:
+      insecure: true
+      insecure_skip_verify: true
+  
+  # jaeger exporter
+  jaeger:
+    endpoint: jaeger-all-in-one:14250
+    tls:
+      insecure: true
+
+extensions:
+  health_check:
+  pprof:
+    endpoint: :1888
+  zpages:
+    endpoint: :55679
+
+service:
+  extensions: [pprof, zpages, health_check]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, jaeger, otlp/netreo]
