@@ -13,16 +13,10 @@ processors:
 exporters:
   logging:
     loglevel: info
-  # host.docker.interal = localhost outside of docker
-  
-  # http exporter to prefix
-  # otlphttp/prefix:
-  #   endpoint: https://host.docker.internal:7295
-  #   tls:
-  #     insecure_skip_verify: true
-  
+
   # grpc exporter to prefix
   otlp/prefix:
+    # host.docker.interal = localhost outside of docker
     endpoint: host.docker.internal:7134
     tls:
       insecure: true
@@ -47,4 +41,4 @@ service:
     traces:
       receivers: [otlp]
       processors: [batch]
-      exporters: [logging, jaeger, otlp/netreo]
+      exporters: [logging, jaeger, otlp/prefix]
