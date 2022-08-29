@@ -102,6 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
-src/Nugget2022/.idea/.idea.Nugget2022/.idea
-src/Nugget2022/Nugget2022/bin
-src/Nugget2022/Nugget2022/obj
+
+.idea/
+bin/
+obj/
