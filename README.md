@@ -6,16 +6,20 @@ This repository contains code and resources that are used in the 2022 Netreo Nug
 ## Prerequisites
 
 * Node
-* DotNet Core 5
+* DotNet Core
 * Docker Desktop
-* Prefix >= v6 or Beta
+* Prefix >= v6 or Developer Release
 
-## Prefix Beta Release downloads
+## Prefix Developer Release
 
-Beta releases of Prefix have hard coded expiration dates after which they will no longer function.  To download the current version of Prefix go to the [Prefix product page](https://stackify.com/prefix/).
+Developer releases of Prefix have hard coded expiration dates after which they will no longer function. They are released as is with no warranty, support or promise of any kind.  Use at your own risk.  
+
+To download the current version of Prefix go to the [Prefix product page](https://stackify.com/prefix/).
 
 
 **Expires on October 25, 2022**
+
+### Download Links
 
 * [MacOs](https://prefix.blob.core.windows.net/pub-beta/stackify-prefix-2022.0825.1.0.beta.pkg)
 * [Windows](https://prefix.blob.core.windows.net/pub-beta/stackify-prefix-2022.0825.1.0.beta.exe)
@@ -44,8 +48,8 @@ otel-collector-sender> npm run start
 
 **Running the sample dotnet application**
 ```shell
-src/Nugget2022> dotnet restore
-src/Nugget2022> dotnet run
+src/Nugget2022/Nugget2022> dotnet restore
+src/Nugget2022/Nugget2022> dotnet run
 ```
 
 ## Connecting your application
