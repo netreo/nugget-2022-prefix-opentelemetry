@@ -17,13 +17,13 @@ Developer releases of Prefix have hard coded expiration dates after which they w
 To download the current version of Prefix go to the [Prefix product page](https://stackify.com/prefix/).
 
 
-**Expires on October 25, 2022**
+**Expires on January 24, 2023**
 
 ### Download Links
 
-* [MacOs](https://prefix.blob.core.windows.net/pub-beta/stackify-prefix-2022.0825.1.0.beta.pkg)
-* [Windows](https://prefix.blob.core.windows.net/pub-beta/stackify-prefix-2022.0825.1.0.beta.exe)
-* [Linux Deb](https://prefix.blob.core.windows.net/pub-beta/stackify-prefix-2022.0825.1.0.beta.deb)
+* [MacOs](https://prefix.blob.core.windows.net/pub-beta/stackify-prefix-2022.1024.1.0.beta.pkg)
+* [Windows](https://prefix.blob.core.windows.net/pub-beta/stackify-prefix-2022.1024.1.0.beta.exe)
+* [Linux Deb](https://prefix.blob.core.windows.net/pub-beta/stackify-prefix-2022.1024.1.0.beta.deb)
 
 ## Ui Links
 
